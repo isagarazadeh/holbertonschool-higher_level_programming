@@ -4,6 +4,6 @@ def add(a, b):
         b = -1 * (-1 * b)
     elif a < 0:
         a = -1 * (-1 * a)
-    c = a + b
+    c = str(ord(a) + ord(b))
     print("{}".format(c), end="")
     return c
