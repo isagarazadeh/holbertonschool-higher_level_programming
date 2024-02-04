@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 def uniq_add(my_list=[]):
-    result = []
+    reduced = set(my_list)
     summa = 0
-    result = my_list.reduce()
-    for i in result:
+    for i in reduced:
         summa += i
-    print("Result: ".format(summa))
+    return summa
