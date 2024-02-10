@@ -52,4 +52,4 @@ class Rectangle:
             for j in range(height):
                 result += "#"
             result += "\n"
-        return result
+        return result[:-1]
