@@ -45,10 +45,11 @@ class Rectangle:
         return 2 * self.width + 2 * self.height
 
     def __str__(self):
+        # Returns rectangle using # signs
         result = ""
-        if self.__width == 0 or self.__height == 0:
+        if self.__height == 0 or self.__width == 0:
             return result
-        for i in range(self.__heigth):
+        for i in range(self.__height):
             for j in range(self.__width):
                 result += "#"
             result += "\n"
