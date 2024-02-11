@@ -6,7 +6,7 @@ This module has a class named Rectangle
 
 class Rectangle:
     '''
-    An object rectangle is defined
+    This class defines a rectangle object
 
     Args:
         number_of_instances: number of instances
@@ -52,18 +52,17 @@ class Rectangle:
         return 2 * self.width + 2 * self.height
 
     def __str__(self):
-        # Returns rectangle using # signs
-        result = ""
-        if self.__height == 0 or self.__width == 0:
-            return result
-        for i in range(self.__height):
-            for j in range(self.__width):
-                result += "#"
-            result += "\n"
-        return result[:-1]
+        string = ""
+        if self.width != 0:
+            for i in range(self.height):
+                string = string + "#" * self.width
+                if i != self.height - 1:
+                    string = string + "\n"
+        return string
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self.width, self.height)
 
     def __del__(self):
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
