@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 '''
-8-class_to_json.py
-
-
+Has a function that returns the dictionary description with
+simple data structure for JSON serialization of an object
 '''
+
 
 def class_to_json(obj):
     '''
@@ -12,6 +12,5 @@ def class_to_json(obj):
 
     Args:
         obj: object
-
     '''
-    return obj.__dict__i
+    return obj.__dict__
