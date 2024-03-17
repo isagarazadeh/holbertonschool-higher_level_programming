@@ -1,15 +1,21 @@
-#!/usr/bin/python3
-import random
-import sys
-from time import sleep
-import datetime
+uu#!/usr/bin/python3
 
-for i in range(10000):
-    sleep(random.random())
-    sys.stdout.write("{:d}.{:d}.{:d}.{:d} - [{}] \"GET /projects/260 HTTP/1.1\" {} {}\n".format(
-        random.randint(1, 255), random.randint(1, 255), random.randint(1, 255), random.randint(1, 255),
-        datetime.datetime.now(),
-        random.choice([200, 301, 400, 401, 403, 404, 405, 500]),
-        random.randint(1, 1024)
-    ))
-    sys.stdout.flush()
+"""
+    The ``13. Search and update`` module
+"""
+
+
+def append_after(filename="", search_string="", new_string=""):
+    """
+        append_after - appends after specific string
+    """
+    new_text = ""
+    with open(filename, "r", encoding="utf-8") as f:
+        for line in f:
+            new_text += line
+            if search_string in line:
+                new_text += new_string
+    f.close()
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(new_text)
+    f.close()
