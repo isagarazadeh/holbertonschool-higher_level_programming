@@ -1,7 +1,6 @@
-
 #!/usr/bin/python3
 '''
-Get all states
+Working on a database
 '''
 
 import MySQLdb
